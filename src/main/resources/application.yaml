@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: acp-cw1
+  jackson:
+    serialization:
+      indent_output: false
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.web.servlet.DispatcherServlet: INFO
+
+acp:
+  postgres: ${ACP_POSTGRES:}
+  s3: ${ACP_S3:}
+  dynamodb: ${ACP_DYNAMODB:}
+  url-endpoint: ${ACP_URL_ENDPOINT:}
