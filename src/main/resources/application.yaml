@@ -4,6 +4,11 @@ spring:
   jackson:
     serialization:
       indent_output: false
+  datasource:
+    url: ${ACP_POSTGRES:jdbc:postgresql://localhost:5432/acp}
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
 
 server:
   port: 8080
@@ -15,7 +20,8 @@ logging:
     org.springframework.web.servlet.DispatcherServlet: INFO
 
 acp:
-  postgres: ${ACP_POSTGRES:}
-  s3: ${ACP_S3:}
-  dynamodb: ${ACP_DYNAMODB:}
-  url-endpoint: ${ACP_URL_ENDPOINT:}
+  postgres: ${ACP_POSTGRES:jdbc:postgresql://localhost:5432/acp}
+  s3: ${ACP_S3:http://localhost:4566}
+  dynamodb: ${ACP_DYNAMODB:http://localhost:4566}
+  url-endpoint: ${ACP_URL_ENDPOINT:http://localhost:8081}
+  sid: ${ACP_SID:}

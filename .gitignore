@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# submission artifacts (keep local, do not version)
+acp_submission_image.tar
+acp_submission_*.zip

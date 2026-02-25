@@ -1,0 +1,6 @@
+.git
+.idea
+.mvn/wrapper/maven-wrapper.jar
+src
+target/*
+!target/acp-cw1-0.0.1-SNAPSHOT.jar
